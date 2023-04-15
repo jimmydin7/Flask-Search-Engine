@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BlackCat - Results</title>
+	<link rel="stylesheet" href="static/css/result.css">
+</head>
+<body>
+	{% if result %}
+		<a href="/" id="home-button">&#x1F3E0;</a>
+		<h1>Good news! I found results for "{{ prompt }}"</h1>
+		<p>{{ result }}</p>
+	{% else %}
+		<h1 id="sad">Sadly, I couldn't find any results for "{{ prompt }}"</h1>
+		<a href="/"><button class="button">Go back to home</button></a>
+	{% endif %}
+</body>
+</html>
